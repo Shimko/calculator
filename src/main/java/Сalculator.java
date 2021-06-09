@@ -1,7 +1,5 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
 
 public class Сalculator extends JFrame {
     private JButton numbers [] = new JButton[10];
@@ -95,8 +93,7 @@ public class Сalculator extends JFrame {
         equ.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double secondValue = Double.valueOf(output.getText()); /* также используем double, valueOf возвращает
-            десятичное значение, передаем в параметр полечение текста в поле */
+                double secondValue = Double.valueOf(output.getText());
                 if ("+".equals(operation)) {
                     output.setText((firstValue + secondValue) + "");
                 }
